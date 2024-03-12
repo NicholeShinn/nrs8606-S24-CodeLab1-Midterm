@@ -34,6 +34,7 @@ public class AsciiLevelLoader : MonoBehaviour
         instance = this;
         FILE_PATH = Application.dataPath + "/Levels/LevelNum.txt";
         LoadLevel();
+        //solution for rotation was to have position match level objects on awake, then on start they all together rotate too 0, 0, 0 rotation from -90 x value, otherwise level objects would not parent properly
         groundParent.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
     }
     
@@ -43,6 +44,7 @@ public class AsciiLevelLoader : MonoBehaviour
         
         level = new GameObject("Level Objects");
         level.transform.parent = groundParent.transform;
+        //below you can see me struggle with setting rotation with the new level objects
         //level.transform.Rotate(new Vector3(0, 0, -90));
         //level.transform.rotation = new Quaternion(45, 0, 0, 0);
        /* level.transform.eulerAngles = new Vector3(

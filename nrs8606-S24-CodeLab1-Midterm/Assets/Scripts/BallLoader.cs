@@ -25,6 +25,7 @@ public class BallLoader: MonoBehaviour
         newObject =
             Instantiate(Resources.Load<GameObject>("Prefabs/Balls"));
         newObject.transform.position = new Vector3(Random.Range(-4, 4), Random.Range(-2, 2), 0);
+        //randomly assigning x, y spawn for new prefab group position 
     }
 
 

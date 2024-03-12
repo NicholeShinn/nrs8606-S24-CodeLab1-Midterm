@@ -14,6 +14,6 @@ public class ReadInput : MonoBehaviour
         inputText01 = a;
         Debug.Log(inputText01);
         Debug.Log("LineChanged!");
-        GameManager.instance.Line01 = inputText01;
+        GameManager.instance.Line = inputText01; //the last line is replaced with the value of the instance Line
     }
 }

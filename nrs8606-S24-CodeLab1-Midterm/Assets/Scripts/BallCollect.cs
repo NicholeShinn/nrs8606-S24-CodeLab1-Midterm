@@ -5,7 +5,10 @@ using UnityEngine;
 
 public class BallCollect : MonoBehaviour
 {
-    //could have made this an array....but I was stuck so did this to finish
+    //could have made this an array....but I was stuck so did this to finish.
+    //struggled with having the array have randomized textures for materials & 
+    //then assigning a sprite to those randomized textures/prefab. Originally 
+    //wanted to make a single sphere with variants but had a hard time triggering
     public GameObject sprite01;
     public GameObject sprite02;
     public GameObject sprite03;
@@ -30,7 +33,7 @@ public class BallCollect : MonoBehaviour
         }
     }
 
-    //if any of the balls hit the collider, via designated tags designated sprites appear & ball is destroyed
+    //if any of the balls that are individually tagged hit the collider, via designated tags designated sprites appear & ball is destroyed
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "ball01")

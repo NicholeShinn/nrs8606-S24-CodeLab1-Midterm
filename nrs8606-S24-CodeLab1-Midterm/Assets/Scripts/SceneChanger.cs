@@ -6,18 +6,14 @@ using TMPro;
 
 public class SceneChanger : MonoBehaviour
 {
-    public GameObject gameManagerHolder;
-    public GameObject currentLineActual;
-    public GameObject currentLineCanvas;
-    public void IntroButton() //function to use on click event 
+
+    public void IntroButton() //function to use on click event to load next scene
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); // Load Scene through getting the current scene and continuing by 1 in the build settings index
     }
     
-    public void ChangePoemText()
+    public void ChangeNextScene()
     {
-        currentLineCanvas.SetActive(true);
-        gameManagerHolder.GetComponent<GameManager>().poemText = currentLineActual.GetComponent<TextMeshProUGUI>();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         
     }

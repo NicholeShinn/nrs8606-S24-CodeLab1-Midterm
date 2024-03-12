@@ -12,12 +12,13 @@ public class ShowFinalText : MonoBehaviour
     void Start()
     {
         
+        gameManagerHolder.GetComponent<GameManager>().poemText = currentLineActual.GetComponent<TextMeshProUGUI>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        currentLineCanvas.SetActive(true);
-        
+       
     }
 }
